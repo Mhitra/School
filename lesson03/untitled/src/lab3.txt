@@ -1,0 +1,131 @@
+import java.util.Scanner;
+public class Task_1 {
+public static void main(String[] args) {
+try (Scanner input = new Scanner(System.in)) {
+    System.out.print("Enter a number: ");
+    int number = input.nextInt();
+    if (number >= 10 && number <= 99 ||number >= -99 && number <= -10) {
+    System.out.println("Number has two digits");
+    } else {
+    System.out.println("Number has not two digits");
+    }
+}
+}
+}
+import java.util.Scanner;
+import java.io.File;
+import java.io.PrintWriter;
+public class Task_2 {
+    public static void main(String[] args) {
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            int a = input.nextInt();
+            System.out.print("Enter a number: ");
+            int b = input.nextInt();
+                        File file = new File("src\\Task_2.txt");
+            if (file.exists()) {
+                System.out.println("File already exists");
+                System.exit(0);
+            }
+                try (PrintWriter output = new PrintWriter(new File("src\\Task_2.txt"))) {
+                    if (a < b) {
+                   output.println("a < b" +" "+ a +" < "+b);
+                   System.out.println("a < b" +" "+ a +" < "+b);
+                } else {
+                    output.println("a > b " + a +" > "+b);
+                    System.out.println("a > b " + a +" > "+b);
+                }
+    
+                    }
+                }
+                catch (Exception e) {
+                    e.getStackTrace();
+                }
+            
+            }
+        }
+import java.util.Scanner;
+public class Task_3 {
+public static void main(String[] args) {
+try (Scanner input = new Scanner(System.in)) {
+    System.out.print("Enter a number: ");
+    int number = input.nextInt();
+    if (number % 10 == 0) {
+    System.out.println("Number can be divided by 10 evenly");
+    } else {
+    System.out.println("Number can not be divided by 10 evenly");
+    }
+}
+}
+}
+import java.util.Scanner;
+public class Task_4 {
+//Write Java program that reads a set of integers, and then prints the sum of the even and odd integers.
+public static void main(String[] args) {
+try (Scanner input = new Scanner(System.in)) {
+    int sumEven = 0;
+    int sumOdd = 0;
+    int number;
+    System.out.println("Enter a number: ");
+    number = input.nextInt();
+for (int i = 0; i < number ; i++) {
+    
+
+    System.out.println("Enter a number: ");
+    number = input.nextInt();
+    if (number % 2 == 0) {
+        sumEven += number;
+    } else {
+        sumOdd += number;
+    }
+}
+    System.out.println("Sum of even numbers: " + sumEven);
+    System.out.println("Sum of odd numbers: " + sumOdd);
+}
+}
+}
+import java.util.Scanner;
+public class Task_5 {
+    public static void main(String[] args) {
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            int number = input.nextInt();
+            
+            switch (number) {
+                case 1:
+                    System.out.println("Monday");
+                    System.out.println("Math \nEnglish \nHistory");
+                    break;
+                case 2:
+                    System.out.println("Tuesday");
+                    System.out.println("Programming \n English \n History");
+                    break;
+                case 3:
+                    System.out.println("Wednesday");
+                    System.out.println("Math \n English \n History");
+                    break;
+                case 4:
+                    System.out.println("Thursday");
+                    System.out.println("Math \n English \n History");
+                    break;
+                case 5:
+                    System.out.println("Friday");
+                    System.out.println("Math \n English \n History");
+                    break;
+                case 6:
+                    System.out.println("Saturday");
+                    System.out.println("No lessons");
+                    break;
+                case 7:
+                    System.out.println("Sunday");
+                    System.out.println("No lessons");
+                    break;
+                default:
+                    System.out.println("Invalid number");
+            }
+        }
+        catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+}
